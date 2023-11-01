@@ -19,7 +19,7 @@ if not authenticator.check_password():
 st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
 #st.header("Hi! Let's visualize data together:", divider='rainbow')
 st.header("Let's visualize data together:", divider='rainbow')
-
+st.write("The following table contains raw data extracted from the software Easotope:")
 
 file_name_list = []
 for i in os.listdir():
