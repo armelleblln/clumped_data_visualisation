@@ -1,15 +1,19 @@
-import streamlit as st
-import pandas as pd
 import os
-import matplotlib.pyplot as plt
-from bokeh.plotting import figure
+
+import pandas as pd
 import plotly.express as px
+import streamlit as st
+
+
 
 st.set_page_config(
     page_title='Home',
     page_icon='🏠'
 )
 
+from tools import authenticator
+if not authenticator.check_password():
+    st.stop()  # Do not continue if check_password is not True.
 
 
 st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
