@@ -10,6 +10,8 @@ st.set_page_config(
     page_icon='🏠'
 )
 
+
+
 st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
 #st.header("Hi! Let's visualize data together:", divider='rainbow')
 st.header("Let's visualize data together:", divider='rainbow')
@@ -38,7 +40,7 @@ st.dataframe(df)
 
 samples = df["Sample"].unique()
 
-selected = st.multiselect("Select sample(s)", samples)
+selected = st.multiselect("Select sample(s)", samples, key="selected_samples")
 
 if len(selected) != 0:
     df = df.loc[df['Sample'].isin(selected)]
@@ -70,43 +72,3 @@ st.dataframe(df)
 #df = df.loc[(df['Excl.'].isna())]
 #st.dataframe(df)
 
-
-
-samples = df["Sample"].unique()
-
-selected = st.multiselect("Select sample(s)", samples)
-
-if len(selected) != 0:
-    df = df.loc[df['Sample'].isin(selected)]
-
-#parameter_list = df.columns.tolist()[6:33]
-#st.selectbox('select parameter',[parameter_list])
-
-x = st.selectbox('x-axis', df.keys()) #df.columns.tolist()[27:80])
-y = st.selectbox('y-axis', df.keys()) #df.columns.tolist()[27:80])
-
-fig = px.scatter(df,
-                 x=x,
-                 y=y,
-                 color= "Sample",
-                 hover_data=["Run","d47",'Weight', 'pCO2'])
-st.plotly_chart(fig,
-                #theme=None,
-                use_container_width=True)
-
-
-_="""
-p1 = figure(
-  x_axis_label=x + ' (wt%)',
-  y_axis_label=y + ' (wt%)')
-p1.scatter(df[x], df[y], legend_label='Trend', size=7)
-st.bokeh_chart(p1, use_container_width = True)
-"""
-
-_="""
-p1 = figure(
-  x_axis_label=x + ' (wt%)',
-  y_axis_label=y + ' (wt%)')
-p1.scatter(df[x], df[y], legend_label='Trend', size=7)
-st.bokeh_chart(p1, use_container_width = True)
-"""
