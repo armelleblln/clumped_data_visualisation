@@ -22,12 +22,14 @@ if st.session_state["uploaded_file"] is not None:
     # Display the data
     st.write("Uploaded Data:")
     st.write(df)
-     st.write("Table with targeted parameters:")
+
+
+    st.write("Table with targeted parameters:")
     df=df[["Run","Sample","d45","d45 SD","d46", "d46 SD", "d47", "d47 SD", "d48", "d48 SD", "d49",
-      "d49 SD", "D47 (raw)", "D47 SD (raw)", "D48 (raw)", "D48 SD (raw)", "D49 (raw)",
-      "d49 SD (raw)", "d13C", "d13C SD", "d18O", "d18O SD", "Magazine", "Weight",
-      "Leak", "p no Acid", "pCO2", "VM1", "Init. Int"]]
-     st.dataframe(df)
+       "d49 SD", "D47 (raw)", "D47 SD (raw)", "D48 (raw)", "D48 SD (raw)", "D49 (raw)",
+           "d49 SD (raw)", "d13C", "d13C SD", "d18O", "d18O SD", "Magazine", "Weight",
+     "Leak", "p no Acid", "pCO2", "VM1", "Init. Int"]]
+    st.dataframe(df)
 
     samples = df["Sample"].unique()
 
