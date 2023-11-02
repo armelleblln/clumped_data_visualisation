@@ -26,7 +26,7 @@ from tools import authenticator
 if not authenticator.check_password():
     st.stop()  # Do not continue if check_password is not True.
 
-st.write("The following template table contains raw data extracted from the software Easotope:")
+st.write("The following template table contains raw data extracted from the Easotope software:")
 
 file_name_list = []
 for i in os.listdir():
