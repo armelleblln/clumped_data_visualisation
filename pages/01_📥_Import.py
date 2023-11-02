@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Title
-st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
+st.title("Quick and easy clumped isotope (𝚫45-49) data visualization")
 st.header("Let's visualize data together:", divider='rainbow')
 st.write("This page enables you to upload the file containing your data extracted from the Easotope software.")
 st.write("Page created in October 2023 by Armelle Ballian | Senckenberg Climate and Biodiversity Research Centre; "
