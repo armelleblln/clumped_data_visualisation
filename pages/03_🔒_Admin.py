@@ -22,9 +22,9 @@ st.header("Let's visualize data together:", divider='rainbow')
 st.write("Page created in October 2023 by Armelle Ballian | Senckenberg Climate and Biodiversity Research Centre; "
          "Goethe University, Frankfurt am Main (Germany)")
 
-#from tools import authenticator
-#if not authenticator.check_password():
-#   st.stop()  # Do not continue if check_password is not True.
+from tools import authenticator
+if not authenticator.check_password():
+    st.stop()  # Do not continue if check_password is not True.
 
 st.write("The following template table contains raw data extracted from the Easotope software:")
 
