@@ -19,7 +19,7 @@ def check_password():
 
 
     st.text_input(
-        "Enter the password", type="password", on_change=password_entered, key="password"
+        "Enter the password to access internal files", type="password", on_change=password_entered, key="password"
     )
     if "password_correct" in st.session_state:
         st.error("😕 Password incorrect")
