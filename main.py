@@ -8,7 +8,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title='Home',
-    page_icon='🏠'
+    page_icon=':home:'
 )
 
 #from tools import authenticator
@@ -26,7 +26,7 @@ from tools import authenticator
 if not authenticator.check_password():
     st.stop()  # Do not continue if check_password is not True.
 
-st.write("The following sample table contains raw data extracted from the software Easotope:")
+st.write("The following template table contains raw data extracted from the software Easotope:")
 
 file_name_list = []
 for i in os.listdir():
