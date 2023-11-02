@@ -13,7 +13,7 @@ st.set_page_config(
 st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
 st.header("Let's visualize data together:", divider='rainbow')
 st.write("This page enables you to upload the file containing your data extracted from the Easotope software.")
-st.write("Armelle Ballian | Senckenberg Climate and Biodiversity Research Centre; "
+st.write("Page created in October 2023 by Armelle Ballian | Senckenberg Climate and Biodiversity Research Centre; "
          "Goethe University, Frankfurt am Main (Germany)")
 
 # Upload Excel file
@@ -62,4 +62,4 @@ if st.session_state["uploaded_file"] is not None:
 
 
 
-st.write("Page created in October 2023")
+st.write("contact: armelle.ballian@senckenberg.de")

@@ -11,14 +11,21 @@ st.set_page_config(
     page_icon='🏠'
 )
 
-from tools import authenticator
-if not authenticator.check_password():
-    st.stop()  # Do not continue if check_password is not True.
+#from tools import authenticator
+#if not authenticator.check_password():
+ #   st.stop()  # Do not continue if check_password is not True.
 
 
 st.title("Quick and easy clumped isotope (𝚫45-49) data visualisation")
 #st.header("Hi! Let's visualize data together:", divider='rainbow')
 st.header("Let's visualize data together:", divider='rainbow')
+st.write("Page created in October 2023 by Armelle Ballian | Senckenberg Climate and Biodiversity Research Centre; "
+         "Goethe University, Frankfurt am Main (Germany)")
+
+from tools import authenticator
+if not authenticator.check_password():
+    st.stop()  # Do not continue if check_password is not True.
+
 st.write("The following sample table contains raw data extracted from the software Easotope:")
 
 file_name_list = []
@@ -78,4 +85,4 @@ st.dataframe(df)
 #st.dataframe(df)
 
 
-st.write("Page created in October 2023")
+st.write("contact: armelle.ballian@senckenberg.de")
