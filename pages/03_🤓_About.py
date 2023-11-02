@@ -8,7 +8,7 @@ col2.image(image, use_column_width=True)
 #st.header("About me and this tool")
 st.divider()
 st.write("My name is Armelle Ballian (she/her), I am currently a PhD student at the "
-         "Senckenberg Climate and Biodiversity Research Centre (Frankfurt am Main, Germany). "
+         "Senckenberg Biodiversity and Climate Research Centre (Frankfurt am Main, Germany). "
          "My research focuses on stable isotope-based paleoelevation and paleoclimate reconstruction (ẟ18O, ẟD, 𝚫47-𝚫48). "
          "I apply clumped isotope thermometry on pedogenic carbonate nodules and "
          "I perform the lab work at the Joint Goethe University-Senckenberg BiK-F Stable Isotope Facility (Frankfurt am Main, Germany) "
