@@ -57,8 +57,8 @@ selected = st.multiselect("Select sample(s)", samples, key="selected_samples")
 if len(selected) != 0:
     df = df.loc[df['Sample'].isin(selected)]
 
-parameter_list = df.columns.tolist()[6:33]
-st.selectbox('select parameter',[parameter_list])
+#parameter_list = df.columns.tolist()[6:33]
+#st.selectbox('Parameters ',[parameter_list])
 
 x = st.selectbox('x-axis', df.keys()) #df.columns.tolist()[27:80])
 y = st.selectbox('y-axis', df.keys()) #df.columns.tolist()[27:80])
