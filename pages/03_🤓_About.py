@@ -1,8 +1,11 @@
 import streamlit as st
+from PIL import Image
 
 st.set_page_config(page_title='About')
-
-st.header("About me and this tool")
+image = Image.open("profile.png")
+col1, col2, col3 = st.columns([3, 3, 3])
+col2.image(image, use_column_width=True)
+#st.header("About me and this tool")
 st.divider()
 st.write("My name is Armelle Ballian (she/her), I am currently a PhD student at the "
          "Senckenberg Climate and Biodiversity Research Centre (Frankfurt am Main, Germany). "
@@ -18,5 +21,8 @@ st.write("Thanks to this tool, you can e.g. have a look at your replicates, "
 st.write("I hope I made your life a bit easier, enjoy playing around with your data 😊")
 st.divider()
 
+
+
+#st.image(image,width=100)
 
 st.write("contact: armelle.ballian@senckenberg.de")
