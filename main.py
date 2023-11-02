@@ -28,7 +28,7 @@ for i in os.listdir():
 
 st.write(file_name_list)
 st.write("Table with raw data:")
-df = pd.read_excel('/Users/aballian/PycharmProjects/clumped_data_visualisation/Sample_data.xlsx')
+df = pd.read_excel('Sample_data.xlsx')
 st.dataframe(df)
 
 st.write("Table with targeted parameters:")
